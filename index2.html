@@ -9,15 +9,16 @@
     />
     <meta name="keywords" content="Poster, Edit, Preview, Components" />
     <title>Timer stopwatch widget</title>
+    <!-- <link rel="stylesheet" href="output.css" /> -->
+    <!-- <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet" -->
+    <!-- /> -->
     <script src="https://kit.fontawesome.com/f9ae33560e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-gray-900">
+  <body>
     <section>
       <div class="relative h-screen w-full">
         <img src="./assets/backgroud.jpeg" alt="Background Image" class="absolute inset-0 w-full h-full object-cover">
@@ -25,15 +26,15 @@
         <div class="absolute inset-0 max-w-6xl mx-auto px-14 flex md:flex-row lg:flex-row flex-col justify-between items-center text-white">
           <!-- title section -->
           <div class="w-full">
-            <h1 class="font-bold text-6xl capitalize flex flex-col -space-y-1 animate__animated animate__fadeIn">
-              <span>Timer<span class="text-gray-100 opacity-20">&</span></span> 
+            <h1 class="font-bold text-6xl capitalize flex flex-col -space-y-1">
+              <span>Timer<span  class="text-gray-100 opacity-20">&</span></span> 
               <span>stopwatch</span> 
               <span>widget</span> 
               <span class="text-gray-100 opacity-20 ">with variables</span> 
             </h1>
-            <p class="text-xl mt-4 tracking-tight animate__animated animate__fadeIn">for iOS in figma + Tutorials</p>
-            <div class="pt-24 flex flex-row gap-2 items-center animate__animated animate__fadeIn">
-              <div class="w-10 h-10 bg-white rounded-full ">
+            <p class="text-xl mt-4 tracking-tight">for iOS in figma + Tutorials</p>
+            <div class="pt-24 flex flex-row gap-2 items-center">
+              <div class="w-10 h-10 bg-white rounded-full">
                 <img class="w-full h-full rounded-full p-1" src="./assets/man.png" alt="">
               </div>
               <h3 class="capitalize text-2xl tracking-tight font-semibold">way of Mani</h3>
@@ -42,31 +43,28 @@
           <!-- card section -->
           <div class="w-full flex flex-col gap-4 md:mt-0 mt-8">
             <!-- timer -->
-            <div id="timer" class="backdrop-blur-sm bg-fuchsia-800 bg-opacity-50 py-4 px-6 rounded-3xl flex flex-row items-center justify-between transform md:rotate-6 md:-translate-x-10 md:translate-y-4 animate__animated 
-            animate__headShake">
+            <div id="timer" class="backdrop-blur-sm bg-fuchsia-800 bg-opacity-50 py-4 px-6 rounded-3xl flex flex-row items-center justify-between transform md:rotate-6 md:-translate-x-10 md:translate-y-4">
               <div class="w-full text-5xl tracking-tighter font-semibold text-white mb-4">
                <div>
-                <span id="timer-sec" class="text-8xl">00</span>
+                <span class="text-8xl">59</span>
                 <span class="opacity-30">sec</span>
                </div>
                 <div>
-                  <span id="timer-min" class="text-8xl">00</span> 
+                  <span class="text-8xl">2</span> 
                 <span class="opacity-30">min</span>
                 </div>
               </div>
               <div class="flex flex-col w-full items-center">
                 <div class="w-full bg-gradient-to-r from-fuchsia-900 to-indigo-900 rounded-2xl p-4">
                   <h1 class="text-xl">Timestamp</h1>
-                  <button class="bg-gray-900 bg-opacity-30 px-2 py-1 rounded-md mt-2 text-lg w-full flex justify-between items-center flex-row">
-                    <input id="timer-input" class="bg-transparent outline-none" type="text" placeholder="Click here MM:SS"> <i class="fa-solid fa-flag text-sm"></i>
+                  <button class="bg-gray-900 bg-opacity-30 px-2 py-1 rounded-md mt-2 text-lg w-full flex justify-between items-center flex-row"><span>Click here</span> <i class="fa-solid fa-flag text-sm"></i>
                   </button>
                 </div>
                 <!-- FORWARD, PAUSE, REWIND -->
                 <div class="backdrop-blur-sm bg-black bg-opacity-50  p-4 rounded-2xl mt-4 text-lg w-full flex justify-between items-center flex-row">
-                  <div><button class="hover:text-gray-300" id="timer-rewind"><i class="fa-solid fa-rotate-left"></i></button></div>
-                  <div><button class="hover:text-gray-300" id="timer-play"><i class="fa-solid fa-play"></i></button></div>
-                  <div><button class="hover:text-gray-300" id="timer-pause"><i class="fa-solid fa-pause"></i></button></div>
-                  <div><button class="hover:text-gray-300" id="timer-forward"><i class="fa-solid fa-rotate-right"></i></button></div>
+                  <div><i class="fa-solid fa-rotate-left"></i></div>
+                  <div><i class="fa-solid fa-pause"></i></div>
+                  <div><i class="fa-solid fa-rotate-right"></i></div>
                 </div>
             </div>
             </div>
@@ -75,11 +73,11 @@
             <div id="stopwatch" class="backdrop-blur-sm bg-indigo-700 bg-opacity-50 py-4 px-6 rounded-3xl flex flex-row items-center justify-between transform md:-rotate-3 md:-translate-y-2">
               <div class="w-full text-5xl tracking-tighter font-semibold text-white mb-4">
                <div>
-                <span id="watch-sec" class="text-8xl">00</span>
+                <span class="text-8xl">24</span>
                 <span class="opacity-20">sec</span>
                </div>
                 <div>
-                  <span id="watch-min" class="text-8xl">00</span> 
+                  <span class="text-8xl">00</span> 
                 <span class="opacity-20">min</span>
                 </div>
               </div>
@@ -87,18 +85,16 @@
                 <div class="w-full bg-gradient-to-r from-purple-900 to-indigo-900 rounded-2xl p-4">
                   <div class="flex flex-row justify-between items-center">
                     <h6 class="text-xl">Target Time:</h1>
-                    <h6 id="stopwatch-target-time" class="text-2xl font-semibold tracking-tight"><span id="stopwatch-target-time-text">0</span> <span class="opacity-20 text-xl">min</span></h1>
+                    <h6 class="text-2xl font-semibold tracking-tight">1 <span class="opacity-20 text-xl">min</span></h1>
                   </div>
-                  <button class="bg-gray-900 bg-opacity-30 px-2 py-1 rounded-md mt-2 text-lg w-full flex justify-between items-center flex-row">
-                    <input id="stopwatch-input" class="bg-transparent outline-none" type="text" placeholder="Click here MM:SS"> <i class="fa-solid fa-flag text-sm"></i>
+                  <button class="bg-gray-900 bg-opacity-30 px-2 py-1 rounded-md mt-2 text-lg w-full flex justify-between items-center flex-row"><span>Click here</span> <i class="fa-solid fa-flag text-sm"></i>
                   </button>
                 </div>
                 <!-- FORWARD, PAUSE, REWIND -->
                 <div class="backdrop-blur-sm bg-black bg-opacity-50  p-4 rounded-2xl mt-4 text-lg w-full flex justify-between items-center flex-row">
-                  <div><button class="hover:text-gray-300" id="watch-rewind"><i class="fa-solid fa-rotate-left"></i></button></div>
-                  <div><button class="hover:text-gray-300" id="watch-play"><i class="fa-solid fa-play"></i></button></div>
-                  <div><button class="hover:text-gray-300" id="watch-pause"><i class="fa-solid fa-pause"></i></button></div>
-                  <div><button class="hover:text-gray-300" id="watch-forward"><i class="fa-solid fa-rotate-right"></i></button></div>
+                  <div><i class="fa-solid fa-rotate-left"></i></div>
+                  <div><i class="fa-solid fa-pause"></i></div>
+                  <div><i class="fa-solid fa-rotate-right"></i></div>
                 </div>
             </div>
             </div>
@@ -109,7 +105,6 @@
 
     </section>
     <!-- Custom js -->
-    <script src="/js/stopwatch.js"></script>
-    <script src="/js/timestamp.js"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>
